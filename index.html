@@ -662,6 +662,107 @@
       </div>
     </div>
 
+    <!-- ============ 结构思考力(延伸)============ -->
+    <div data-think data-reveal style="margin-bottom:clamp(44px,5vw,64px);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,3.2vw,46px);background:linear-gradient(180deg,#ffffff,var(--soft));box-shadow:0 1px 2px rgba(0,0,0,.04);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;">
+        <span style="font-family:var(--en);font-size:12px;font-weight:700;letter-spacing:.14em;color:{{ accent }};">延伸 · A THOUGHT EXPERIMENT</span>
+        <span style="height:1px;flex:1;background:var(--line);"></span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:minmax(280px,1fr) minmax(210px,290px);gap:clamp(24px,4vw,52px);align-items:center;">
+        <!-- question -->
+        <div>
+          <h3 style="font-family:var(--cn);font-weight:900;font-size:clamp(24px,3vw,36px);letter-spacing:-.02em;color:var(--ink);line-height:1.14;">【结构思考力】</h3>
+          <p style="font-family:var(--cn);font-size:clamp(15px,1.2vw,17px);line-height:1.7;color:var(--muted);margin-top:10px;">不展开,只问一个问题——</p>
+          <p style="font-family:var(--cn);font-weight:700;font-size:clamp(20px,2.4vw,30px);line-height:1.32;letter-spacing:-.01em;color:var(--ink);margin-top:14px;">如何把 <span style="color:{{ accent }};">300ml</span> 的水,<br>装进 <span style="color:{{ accent }};">200ml</span> 的杯子里?</p>
+          <p style="font-family:var(--cn);font-size:14px;line-height:1.65;color:var(--soft-muted);margin-top:14px;">这不是脑筋急转弯,是个真要解决的问题。想到答案了吗?</p>
+          <button onClick="{{ toggleThink }}" style="margin-top:22px;display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;border:none;cursor:pointer;font-family:var(--cn);font-size:14px;font-weight:700;padding:11px 21px;border-radius:9999px;transition:opacity .2s;">
+            <span data-lbl>思路展示</span>
+            <span data-chev style="display:inline-block;transition:transform .35s;font-size:10px;">▼</span>
+          </button>
+        </div>
+
+        <!-- illustration: 200ml cup can't hold 300ml water -->
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 240 220" width="100%" style="max-width:250px;font-family:var(--cn);">
+            <defs>
+              <linearGradient id="thk-wtr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+              <clipPath id="thk-cup"><path d="M84 74 L156 74 L150 176 Q150 182 144 182 L96 182 Q90 182 90 176 Z"/></clipPath>
+            </defs>
+            <text x="120" y="34" text-anchor="middle" font-size="12" font-weight="700" fill="#3b82f6">装不下 · 溢出来</text>
+            <!-- water clipped inside cup -->
+            <g clip-path="url(#thk-cup)"><rect x="84" y="76" width="72" height="120" fill="url(#thk-wtr)"/></g>
+            <!-- overflow dome above rim -->
+            <path d="M87 75 Q120 50 153 75 Z" fill="url(#thk-wtr)"/>
+            <ellipse cx="120" cy="75" rx="34" ry="6.5" fill="#60a5fa"/>
+            <!-- cup outline + rim -->
+            <path d="M84 74 L156 74 L150 176 Q150 182 144 182 L96 182 Q90 182 90 176 Z" fill="none" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="81" y1="74" x2="159" y2="74" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- spilling drops -->
+            <g fill="#3b82f6">
+              <circle cx="90" cy="80" r="4"><animateMotion dur="1.9s" repeatCount="indefinite" path="M0 0 C -7 22, -7 44, -3 74"/><animate attributeName="opacity" dur="1.9s" repeatCount="indefinite" values="0;1;1;0"/></circle>
+              <circle cx="150" cy="80" r="4"><animateMotion dur="1.9s" begin="0.65s" repeatCount="indefinite" path="M0 0 C 7 22, 7 44, 3 74"/><animate attributeName="opacity" dur="1.9s" begin="0.65s" repeatCount="indefinite" values="0;1;1;0"/></circle>
+              <circle cx="120" cy="49" r="3.4"><animateMotion dur="1.9s" begin="0.3s" repeatCount="indefinite" path="M0 0 C -3 -11, 3 -15, 0 -5"/><animate attributeName="opacity" dur="1.9s" begin="0.3s" repeatCount="indefinite" values="0;1;0"/></circle>
+            </g>
+            <text x="120" y="206" text-anchor="middle" font-size="12.5" font-weight="700" fill="#111">200ml 杯 · 300ml 水</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- reasoning panel (revealed on click) -->
+      <div data-think-panel data-open="0" style="max-height:0;opacity:0;overflow:hidden;transition:max-height .55s cubic-bezier(.16,1,.3,1),opacity .45s ease,margin-top .45s ease;">
+        <div style="border-top:1px dashed var(--line);padding-top:clamp(24px,3vw,34px);">
+          <p style="font-family:var(--cn);font-size:clamp(15px,1.2vw,18px);line-height:1.7;color:var(--body);max-width:760px;">先别急着答,先问一句:<b style="color:var(--ink);">为什么水会流出来?</b> 把原因拆开,无外乎三类——这就是「先总后分」。每一类,都能长出一条解法。</p>
+
+          <div style="display:flex;align-items:center;gap:10px;margin:22px 0 4px;font-family:var(--cn);font-size:13px;font-weight:700;color:var(--soft-muted);">
+            <span style="width:26px;height:1px;background:var(--line);"></span>拆成三个维度<span style="height:1px;flex:1;background:var(--line);"></span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(16px,2vw,22px);margin-top:20px;">
+            <!-- DIM 01 杯子本身 -->
+            <div data-think-card style="opacity:0;transform:translateY(26px);border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff;">
+              <div style="font-family:var(--en);font-size:11px;font-weight:700;color:var(--soft-muted);letter-spacing:.08em;">DIM 01 · 内因</div>
+              <div style="font-family:var(--cn);font-weight:900;font-size:20px;color:var(--ink);margin-top:7px;">杯子本身</div>
+              <div style="font-family:var(--cn);font-size:14px;color:var(--muted);margin-top:9px;line-height:1.6;">太小,又没有气球那样的张力,撑不大。</div>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);display:flex;gap:8px;align-items:baseline;">
+                <span style="font-family:var(--cn);font-size:12px;font-weight:700;color:{{ accent }};white-space:nowrap;">解法 →</span>
+                <span style="font-family:var(--cn);font-size:14.5px;line-height:1.55;color:var(--body);">换个更大 / 有张力的杯子</span>
+              </div>
+            </div>
+
+            <!-- DIM 02 外部环境 -->
+            <div data-think-card style="opacity:0;transform:translateY(26px);border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff;">
+              <div style="font-family:var(--en);font-size:11px;font-weight:700;color:var(--soft-muted);letter-spacing:.08em;">DIM 02 · 外因</div>
+              <div style="font-family:var(--cn);font-weight:900;font-size:20px;color:var(--ink);margin-top:7px;">外部环境</div>
+              <div style="font-family:var(--cn);font-size:14px;color:var(--muted);margin-top:9px;line-height:1.6;">地球有重力,把水一直往下拽。</div>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);display:flex;gap:8px;align-items:baseline;">
+                <span style="font-family:var(--cn);font-size:12px;font-weight:700;color:{{ accent }};white-space:nowrap;">解法 →</span>
+                <span style="font-family:var(--cn);font-size:14.5px;line-height:1.55;color:var(--body);">拿到太空里(失重环境)</span>
+              </div>
+            </div>
+
+            <!-- DIM 03 水本身 (标准答案) -->
+            <div data-think-card style="opacity:0;transform:translateY(26px);border:1.5px solid {{ accent }};border-radius:16px;padding:22px;background:rgba(59,130,246,.05);position:relative;">
+              <div style="position:absolute;top:-11px;right:16px;background:{{ accent }};color:#fff;font-family:var(--cn);font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;">★ 标准答案</div>
+              <div style="font-family:var(--en);font-size:11px;font-weight:700;color:{{ accent }};letter-spacing:.08em;">DIM 03 · 本体</div>
+              <div style="font-family:var(--cn);font-weight:900;font-size:20px;color:var(--ink);margin-top:7px;">水本身</div>
+              <div style="font-family:var(--cn);font-size:14px;color:var(--muted);margin-top:9px;line-height:1.6;">它是液体,天生会流动。</div>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px dashed rgba(59,130,246,.35);display:flex;gap:8px;align-items:baseline;">
+                <span style="font-family:var(--cn);font-size:12px;font-weight:700;color:{{ accent }};white-space:nowrap;">解法 →</span>
+                <span style="font-family:var(--cn);font-size:14.5px;line-height:1.55;color:var(--ink);font-weight:600;">冻成冰(液体 → 固体)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:26px;padding:18px 22px;border-radius:14px;background:var(--ink);color:#fff;display:flex;gap:14px;align-items:flex-start;">
+            <span style="font-family:var(--en);font-weight:800;font-size:18px;color:{{ accent }};line-height:1.4;">✓</span>
+            <p style="font-family:var(--cn);font-size:clamp(14px,1.1vw,16px);line-height:1.72;">重点不是背下「冻成冰」,而是那套<b style="color:#fff;">先总后分</b>的过程:把一个问题拆成<b style="color:#fff;">几个侧面(杯子 / 环境 / 水)</b>,每个侧面都能长出解法,答案自然浮现。这就是结构思考力——和「工程思维」同源:<b style="color:#fff;">结构越清楚,活儿就拆得越准。</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- five action panels -->
     <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,22px);">
 
@@ -1272,6 +1373,32 @@ class Component extends DCLogic {
           panel.setAttribute('data-open', '1');
           if (chev) chev.style.transform = 'rotate(180deg)';
           if (lbl) lbl.textContent = '收起讲稿';
+        }
+      },
+      toggleThink: (e) => {
+        const btn = e.currentTarget;
+        const wrap = btn.closest('[data-think]');
+        const panel = wrap.querySelector('[data-think-panel]');
+        const chev = btn.querySelector('[data-chev]');
+        const lbl = btn.querySelector('[data-lbl]');
+        const cards = wrap.querySelectorAll('[data-think-card]');
+        const isOpen = panel.getAttribute('data-open') === '1';
+        if (isOpen) {
+          panel.style.maxHeight = '0px'; panel.style.opacity = '0'; panel.style.marginTop = '0px';
+          panel.setAttribute('data-open', '0');
+          if (chev) chev.style.transform = 'rotate(0deg)';
+          if (lbl) lbl.textContent = '思路展示';
+          cards.forEach((c) => { c.style.transitionDelay = '0s'; c.style.opacity = '0'; c.style.transform = 'translateY(26px)'; });
+        } else {
+          panel.style.maxHeight = (panel.scrollHeight + 320) + 'px'; panel.style.opacity = '1'; panel.style.marginTop = '30px';
+          panel.setAttribute('data-open', '1');
+          if (chev) chev.style.transform = 'rotate(180deg)';
+          if (lbl) lbl.textContent = '收起思路';
+          cards.forEach((c, i) => {
+            c.style.transition = 'opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1)';
+            c.style.transitionDelay = (0.12 + i * 0.3) + 's';
+            requestAnimationFrame(() => requestAnimationFrame(() => { c.style.opacity = '1'; c.style.transform = 'translateY(0)'; }));
+          });
         }
       },
       chapters: [
