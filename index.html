@@ -37,7 +37,7 @@
 </helmet>
 
 
-<div style="--ink:#111111;--body:#374151;--muted:#6b7280;--soft-muted:#898989;--line:#e5e7eb;--line2:#f3f4f6;--card:#f5f5f5;--soft:#f8f9fa;--dark:#0e0e0e;--dark2:#1a1a1a;--ondark:#a1a1aa;--cn:'Noto Sans SC',-apple-system,'PingFang SC',sans-serif;--en:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;font-family:var(--cn);color:var(--body);position:relative;">
+<div style="--ink:#111111;--body:#374151;--muted:#6b7280;--soft-muted:#898989;--line:#e5e7eb;--line2:#f3f4f6;--card:#f5f5f5;--soft:#f8f9fa;--dark:#0e0e0e;--dark2:#1a1a1a;--ondark:#a1a1aa;--cn:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;--en:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Inter','Segoe UI',Arial,sans-serif;--mono:'SF Mono',ui-monospace,SFMono-Regular,Menlo,'JetBrains Mono',monospace;font-family:var(--cn);color:var(--body);position:relative;">
 
   <!-- reading progress bar -->
   <div style="position:fixed;top:0;left:0;right:0;height:3px;z-index:100;background:transparent;">
@@ -152,13 +152,13 @@
             <div style="background:var(--soft);border-radius:16px;padding:22px;display:flex;align-items:center;justify-content:center;min-height:280px;">
               <svg viewBox="0 0 400 240" width="100%" style="max-width:420px;font-family:var(--cn);">
                 <defs><marker id="ah1" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9ca3af"/></marker></defs>
-                <text x="200" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="#9ca3af" font-family="Inter">你说一句 · 它回一句 · 一次一次</text>
+                <text x="200" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">你说一句 · 它回一句 · 一次一次</text>
                 <!-- person -->
                 <circle cx="44" cy="118" r="14" fill="#111"/><path d="M24,158 C24,138 64,138 64,158 Z" fill="#111"/>
                 <text x="44" y="182" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">你</text>
                 <!-- AI -->
                 <rect x="150" y="98" width="92" height="60" rx="13" fill="#111"/>
-                <text x="196" y="134" text-anchor="middle" font-size="19" font-weight="700" fill="#fff" font-family="Inter">AI</text>
+                <text x="196" y="134" text-anchor="middle" font-size="19" font-weight="700" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">AI</text>
                 <!-- answer -->
                 <rect x="300" y="102" width="72" height="52" rx="10" fill="#fff" stroke="#d1d5db"/>
                 <line x1="312" y1="118" x2="360" y2="118" stroke="#d1d5db" stroke-width="3" stroke-linecap="round"/>
@@ -244,7 +244,7 @@
               <svg viewBox="0 0 440 320" width="100%" style="max-width:460px;font-family:var(--cn);">
                 <!-- harness frame -->
                 <rect x="12" y="30" width="416" height="238" rx="18" fill="none" stroke="#c7ccd3" stroke-width="1.6" stroke-dasharray="7 6"/>
-                <text x="26" y="22" font-size="12" font-weight="700" fill="#9ca3af" font-family="Inter">HARNESS · 能安全干活的环境</text>
+                <text x="26" y="22" font-size="12" font-weight="700" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">HARNESS · 能安全干活的环境</text>
                 <!-- orbit scan -->
                 <circle cx="220" cy="140" r="86" fill="none" stroke="#eef0f2" stroke-width="1.5"/>
                 <circle r="5" fill="#3b82f6"><animateMotion dur="6s" repeatCount="indefinite" path="M220,54 A86,86 0 1,1 219.9,54"/></circle>
@@ -253,7 +253,7 @@
                   <line x1="220" y1="140" x2="120" y2="80"/><line x1="220" y1="140" x2="320" y2="80"/><line x1="220" y1="140" x2="352" y2="150"/><line x1="220" y1="140" x2="300" y2="210"/><line x1="220" y1="140" x2="120" y2="210"/>
                 </g>
                 <!-- agent core -->
-                <circle cx="220" cy="140" r="40" fill="#111"/><text x="220" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Inter">Agent</text>
+                <circle cx="220" cy="140" r="40" fill="#111"/><text x="220" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">Agent</text>
                 <!-- nodes -->
                 <g font-size="12" font-weight="700">
                   <g><rect x="86" y="64" width="68" height="30" rx="8" fill="#fff" stroke="#d1d5db"/><text x="120" y="84" text-anchor="middle" fill="#374151">🔧 工具</text></g>
@@ -328,7 +328,7 @@
                 <path d="M76,186 L79,196" stroke="#3b82f6" stroke-width="2"/>
                 <line x1="60" y1="178" x2="79" y2="196" stroke="#6b7280" stroke-width="1.6" marker-end="url(#ah4)"/>
                 <!-- token meter -->
-                <g><text x="360" y="70" text-anchor="middle" font-size="26" font-weight="800" fill="#3b82f6" font-family="Inter" style="animation:tokenTick 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center">$</text><text x="360" y="98" text-anchor="middle" font-size="10.5" font-weight="600" fill="#8b8b90">每转一圈</text><text x="360" y="112" text-anchor="middle" font-size="10.5" font-weight="600" fill="#8b8b90">都在烧 token</text></g>
+                <g><text x="360" y="70" text-anchor="middle" font-size="26" font-weight="800" fill="#3b82f6" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif" style="animation:tokenTick 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center">$</text><text x="360" y="98" text-anchor="middle" font-size="10.5" font-weight="600" fill="#8b8b90">每转一圈</text><text x="360" y="112" text-anchor="middle" font-size="10.5" font-weight="600" fill="#8b8b90">都在烧 token</text></g>
               </svg>
             </div>
           </div>
@@ -452,9 +452,9 @@
             <!-- computer / folder frame -->
             <rect x="14" y="14" width="332" height="150" rx="12" fill="#161616" stroke="#2c2c2c"/>
             <rect x="14" y="14" width="332" height="26" rx="12" fill="#1e1e1e"/><circle cx="30" cy="27" r="3.5" fill="#3a3a3a"/><circle cx="42" cy="27" r="3.5" fill="#3a3a3a"/><circle cx="54" cy="27" r="3.5" fill="#3a3a3a"/>
-            <text x="180" y="31" text-anchor="middle" font-size="10.5" font-weight="600" fill="#7a7a7f" font-family="Inter">你的电脑 · 整个文件夹</text>
+            <text x="180" y="31" text-anchor="middle" font-size="10.5" font-weight="600" fill="#7a7a7f" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">你的电脑 · 整个文件夹</text>
             <!-- file tree -->
-            <g fill="#8b8b90" font-size="10" font-weight="600" font-family="Inter">
+            <g fill="#8b8b90" font-size="10" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">
               <rect x="30" y="52" width="72" height="14" rx="3" fill="#232323"/><text x="38" y="62">src/</text>
               <rect x="30" y="72" width="72" height="14" rx="3" fill="#232323"/><text x="38" y="82">app.js</text>
               <rect x="30" y="92" width="72" height="14" rx="3" fill="#232323"/><text x="38" y="102">data.csv</text>
@@ -462,7 +462,7 @@
             </g>
             <rect x="30" y="52" width="72" height="14" rx="3" fill="none" stroke="#3b82f6" stroke-width="1.5"><animate attributeName="y" values="52;72;92;112;52" dur="4s" repeatCount="indefinite"/></rect>
             <!-- agent core -->
-            <circle cx="240" cy="90" r="30" fill="#111" stroke="#3b82f6" stroke-width="1.5"/><text x="240" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Inter">AI</text>
+            <circle cx="240" cy="90" r="30" fill="#111" stroke="#3b82f6" stroke-width="1.5"/><text x="240" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">AI</text>
             <!-- action verbs cycling -->
             <g font-size="10.5" font-weight="700" fill="#fff">
               <rect x="150" y="46" width="58" height="20" rx="10" fill="#232323"/><text x="179" y="60" text-anchor="middle">读文件</text>
@@ -519,7 +519,7 @@
           <!-- AI core middle -->
           <g>
             <rect x="480" y="72" width="160" height="116" rx="16" fill="#111"/>
-            <text x="560" y="112" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="Inter">AI 干活</text>
+            <text x="560" y="112" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">AI 干活</text>
             <text x="560" y="136" text-anchor="middle" font-size="11" font-weight="500" fill="#9ca3af">放手让它做</text>
             <circle data-spin cx="560" cy="130" r="0" fill="none"/>
             <!-- approval gate on AI -->
@@ -729,7 +729,7 @@
               <path d="M20,52 h48 l10,12 h72 a8,8 0 0 1 8,8 v78 a8,8 0 0 1 -8,8 h-122 a8,8 0 0 1 -8,-8 v-90 a8,8 0 0 1 8,-8 Z" fill="#fff" stroke="#d1d5db"/>
               <g font-size="10.5" font-weight="700" fill="#374151"><rect x="30" y="80" width="58" height="20" rx="5" fill="#f5f5f5"/><text x="59" y="94" text-anchor="middle">品牌色</text><rect x="94" y="80" width="48" height="20" rx="5" fill="#f5f5f5"/><text x="118" y="94" text-anchor="middle">logo</text><rect x="30" y="106" width="48" height="20" rx="5" fill="#f5f5f5"/><text x="54" y="120" text-anchor="middle">字体</text><rect x="84" y="106" width="58" height="20" rx="5" fill="#f5f5f5"/><text x="113" y="120" text-anchor="middle">口播稿</text><rect x="30" y="132" width="48" height="20" rx="5" fill="#f5f5f5"/><text x="54" y="146" text-anchor="middle">素材</text><rect x="84" y="132" width="58" height="20" rx="5" fill="#f5f5f5"/><text x="113" y="146" text-anchor="middle">旧成片</text></g>
               <line x1="164" y1="112" x2="222" y2="112" stroke="#3b82f6" stroke-width="2.4" stroke-dasharray="6 6" marker-end="url(#s3)" style="animation:dashFlow 1s linear infinite"/>
-              <circle cx="278" cy="112" r="34" fill="#111"/><text x="278" y="117" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Inter">AI</text>
+              <circle cx="278" cy="112" r="34" fill="#111"/><text x="278" y="117" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">AI</text>
               <text x="278" y="164" text-anchor="middle" font-size="10.5" font-weight="700" fill="#6b7280">照着你的家底干活</text>
             </svg>
           </div>
@@ -853,7 +853,7 @@
           <g><path d="M470,58 h44 l10,12 h84 a8,8 0 0 1 8,8 v54 a8,8 0 0 1 -8,8 h-138 a8,8 0 0 1 -8,-8 v-66 a8,8 0 0 1 8,-8 Z" fill="#fff" stroke="#111"/><text x="547" y="98" text-anchor="middle" font-size="13" font-weight="800" fill="#111">Skill</text><text x="547" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7280">SKILL.md + 脚本</text><text x="547" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#9ca3af">写给 AI 看的说明书</text></g>
           <line x1="626" y1="86" x2="690" y2="86" stroke="#3b82f6" stroke-width="2.6" stroke-dasharray="6 7" marker-end="url(#sk)" style="animation:dashFlow 1s linear infinite"/>
           <!-- auto apply -->
-          <circle cx="742" cy="86" r="34" fill="#111"/><text x="742" y="91" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Inter">AI</text>
+          <circle cx="742" cy="86" r="34" fill="#111"/><text x="742" y="91" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">AI</text>
           <text x="820" y="82" text-anchor="middle" font-size="13" font-weight="800" fill="#111">自动照做</text><text x="820" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#6b7280">不用再教</text>
         </svg>
       </div>
@@ -1014,7 +1014,7 @@
           <rect x="20" y="58" width="80" height="46" rx="6" fill="#f0f0f0"/><rect x="110" y="58" width="80" height="46" rx="6" fill="#f0f0f0"/><rect x="200" y="58" width="80" height="46" rx="6" fill="#f0f0f0"/>
           <rect x="118" y="116" width="64" height="20" rx="10" fill="url(#slopgrad)"/>
           <defs><linearGradient id="slopgrad" x1="0" x2="1"><stop offset="0" stop-color="#a855f7"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs>
-          <g font-family="Inter" font-weight="800" font-size="15" fill="#e5e7eb"><text x="60" y="164">99+</text><text x="140" y="164">10x</text><text x="215" y="164">24/7</text></g>
+          <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif" font-weight="800" font-size="15" fill="#e5e7eb"><text x="60" y="164">99+</text><text x="140" y="164">10x</text><text x="215" y="164">24/7</text></g>
           <g fill="#ececec"><circle cx="34" cy="180" r="6"/><circle cx="54" cy="180" r="6"/><circle cx="74" cy="180" r="6"/><circle cx="94" cy="180" r="6"/></g>
         </svg>
         <p style="font-family:var(--cn);font-size:13.5px;line-height:1.6;color:var(--muted);margin-top:12px;">居中大标题 · 三张并排卡片 · 渐变紫按钮 · 假数据统计 · 一排图标。</p>
@@ -1122,7 +1122,7 @@
               <text x="150" y="158" text-anchor="middle" font-size="10" font-weight="700" fill="#3b82f6">参考图</text>
               <line x1="188" y1="94" x2="214" y2="94" stroke="#3b82f6" stroke-width="2.2" marker-end="url(#u3)"/>
               <text x="150" y="34" text-anchor="middle" font-size="9.5" font-weight="600" fill="#9ca3af">+ 现有代码</text>
-              <circle cx="248" cy="94" r="30" fill="#111"/><text x="248" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Inter">AI</text>
+              <circle cx="248" cy="94" r="30" fill="#111"/><text x="248" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">AI</text>
               <line x1="278" y1="94" x2="304" y2="94" stroke="#3b82f6" stroke-width="2.2" marker-end="url(#u3)"/>
               <rect x="312" y="66" width="40" height="56" rx="6" fill="#fff" stroke="#111"/><rect x="318" y="74" width="28" height="8" rx="2" fill="#111"/><rect x="318" y="88" width="20" height="6" rx="2" fill="#e5e7eb"/><rect x="318" y="100" width="24" height="6" rx="2" fill="#e5e7eb"/>
               <text x="332" y="140" text-anchor="middle" font-size="9.5" font-weight="700" fill="#6b7280">复刻页面</text>
